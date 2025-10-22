@@ -20,8 +20,8 @@
       }
 
       body {
-        background-color: rgb(0, 0, 33);
-        color: white;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
       }
 
       nav {
@@ -106,9 +106,9 @@
 
       .btn {
         padding: 12px 24px;
-        color: white;
-        background: #0d2238;
-        border: 2px solid white;
+        color: rgb(0, 0, 0);
+        background: #ffffff;
+        border: 2px solid rgb(0, 0, 0);
         border-radius: 20px;
         font-size: 18px;
         cursor: pointer;
@@ -117,9 +117,8 @@
 
       /* Hover effect */
       .btn:hover {
-        background: white;
-        color: #0d2238;
-        border-color: white;
+        background: rgb(123, 147, 158);
+        color: #000000;
         transform: scale(1.05); /* slight zoom */
       }
 
@@ -141,6 +140,10 @@
         color: blueviolet;
       }
 
+      h1 {
+        font-size: 35px;
+      }
+
       .secondSection {
         flex-direction: column;
         max-width: 80vw;
@@ -153,7 +156,7 @@
       }
 
       .secondSection .box {
-        background: white;
+        background: rgb(0, 0, 0);
         width: 77vw;
         height: 2px;
         margin: 100px 0;
@@ -163,7 +166,7 @@
       .secondSection .vertical {
         height: 125px;
         width: 1px;
-        background-color: white;
+        background-color: rgb(0, 0, 0);
         margin: 0 140px;
       }
 
@@ -183,7 +186,7 @@
       }
 
       .image-bottom1:hover {
-        transform: scale(1.05); /* slight zoom */
+        transform: scale(1.2); /* slight zoom */
       }
 
       .image-bottom2 {
@@ -195,7 +198,7 @@
       }
 
       .image-bottom2:hover {
-        transform: scale(1.05); /* slight zoom */
+        transform: scale(1.2); /* slight zoom */
       }
 
       .vertical-title {
@@ -235,52 +238,71 @@
         flex-direction: column;
         max-width: 80vw;
         margin: auto;
-        height: 125vh;
+        height: 140vh;
       }
 
       .thirdSection .languages {
-        margin: 25px -18px;
+        margin: 32px;
         display: flex;
         flex-direction: row;
-        gap: 70px;
+        gap: 95px;
+        justify-content: center;
       }
 
       .language-photos {
         position: relative;
-        top: -4px;
         object-fit: contain;
+        width: 70px;
+        transition: all 0.3s ease; /* smooth hover */
       }
 
-      .thirdSection .box2 {
-        width: 77vw;
-        margin: -122px -30px;
-        display: flex;
+      .language-photos:hover {
+        transform: scale(1.2); /* slight zoom */
+        cursor: pointer;
       }
 
-      .language-image {
-        margin: 0 7px;
-      }
-
-      .image-name {
+      .database-photos {
         position: relative;
-        top: 80px;
-        width: 200px;
-        left: -9px;
-        font-size: 1.2rem;
-        color: #a9a8b1;
+        object-fit: contain;
+        width: 95px;
+        transition: all 0.3s ease; /* smooth hover */
       }
 
-      .skill-heading1 {
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-        font-size: 1.5em;
+      .database-photos:hover {
+        transform: scale(1.2); /* slight zoom */
+        cursor: pointer;
       }
 
-      .skill-heading2 {
+      .frameworks-photos {
+        position: relative;
+        object-fit: contain;
+        width: 85px;
+        transition: all 0.3s ease; /* smooth hover */
+      }
+
+      .frameworks-photos:hover {
+        transform: scale(1.2); /* slight zoom */
+        cursor: pointer;
+      }
+
+      .tools-photos
+      {
+        position: relative;
+        object-fit: contain;
+        width: 85px;
+        transition: all 0.3s ease; /* smooth hover */
+      }
+
+      .tools-photos:hover
+      {
+        transform: scale(1.2); /* slight zoom */
+        cursor: pointer;
+      }
+
+      .skill-heading {
         display: flex;
         justify-content: center;
-        margin-top: 245px;
+        margin-top: 120px;
         font-size: 1.5em;
       }
 
@@ -541,138 +563,60 @@
 
         <h1>Skills</h1>
 
-        <div class="skill-heading1">Programming Languages</div>
+        <div class="skill-heading">Programming Languages</div>
 
         <div class="languages">
-          <img
-            class="language-photos"
-            style="width: 145px; left: -68px"
-            src="java_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="java.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 183px; left: -90px"
-            src="c++_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="c++.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 100px; left: -76px"
-            src="python_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="python.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 121px; left: -31px"
-            src="js_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="js.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 160px; left: -40px"
-            src="html_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="html.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 96px; left: -34px"
-            src="css_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="css.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 99px; left: 15px"
-            src="ruby_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="ruby.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 283px; left: -42px"
-            src="c_logo.png"
-            alt=""
-          />
+          <img class="language-photos" src="c-sharp.png" alt="" />
         </div>
 
-        <div class="box2">
-          <div class="language-image">
-            <div class="image-name">Java</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">C++</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">Python</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">JavaScript</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">HTML</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">CSS</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">Ruby</div>
-          </div>
-
-          <div class="language-image">
-            <div class="image-name">C#</div>
-          </div>
-        </div>
-
-        <div class="skill-heading2">Databases</div>
+        <div class="skill-heading">Databases</div>
 
         <div class="languages">
-          <img
-            class="language-photos"
-            style="width: 145px; left: -68px"
-            src="mysql_logo.png"
-            alt=""
-          />
+          <img class="database-photos" src="mysql.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 183px; left: -90px"
-            src="postgresql_logo.png"
-            alt=""
-          />
+          <img class="database-photos" src="postgresql.png" alt="" />
 
-          <img
-            class="language-photos"
-            style="width: 100px; left: -76px"
-            src="mongodb_logo.png"
-            alt=""
-          />
+          <img class="database-photos" src="mongodb.png" alt="" />
         </div>
 
-        <div class="box2">
-          <div class="language-image">
-            <div class="image-name">Java</div>
-          </div>
+        <div class="skill-heading">Frameworks & Libraries</div>
 
-          <div class="language-image">
-            <div class="image-name">C++</div>
-          </div>
+        <div class="languages">
+          <img class="frameworks-photos" src="react.png" alt="" />
 
-          <div class="language-image">
-            <div class="image-name">Python</div>
-          </div>
+          <img class="frameworks-photos" src="node-js.png" alt="" />
+
+          <img class="frameworks-photos" src="tailwind-css.png" alt="" />
+
+          <img class="frameworks-photos" src="rails.png" alt="" />
         </div>
+
+         <div class="skill-heading">Tools</div>
+
+        <div class="languages">
+          <img class="tools-photos" src="github.png" alt="" />
+
+          <img class="tools-photos" src="git.png" alt="" />
+
+          <img class="tools-photos" src="vscode.png" alt="" />
+
+          <img class="tools-photos" src="vercel.png" alt="" />
+        </div>
+
       </section>
     </main>
 
