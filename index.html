@@ -19,14 +19,12 @@
         padding: 0;
       }
 
-      body 
-      {
+      body {
         background-color: rgb(0, 0, 33);
         color: white;
       }
 
-      nav 
-      {
+      nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -34,91 +32,79 @@
         background-color: rgb(18, 18, 62);
       }
 
-      .title-first
-      {
-        font-size: 1.6rem;
+      .title-first {
+        font-size: 2rem;
         text-decoration: none; /* removes underline */
         color: white; /* default color */
-        transition: color 0.3s ease; /* smooth hover effect */
+        transition: all 0.3s ease; /* smooth hover */
       }
 
-      .title-first:hover 
-      {
+      .title-first:hover {
         color: rgb(175, 175, 255);
-        font-size: 1.7rem;
+        font-size: 2.1rem;
+        transform: scale(1.05); /* slight zoom */
       }
 
-      nav ul 
-      {
+      nav ul {
         display: flex;
         justify-content: center;
       }
 
-      nav ul li 
-      {
+      nav ul li {
         list-style: none;
         margin: 0 23px;
       }
 
-      nav ul li a 
-      {
-        font-size: 1rem;
+      nav ul li a {
+        font-size: 1.5rem;
         text-decoration: none;
         color: white;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease; /* smooth hover */
       }
 
-      nav ul li a:hover 
-      {
+      nav ul li a:hover {
         color: rgb(175, 175, 255);
-        font-size: 1.1rem;
+        font-size: 1.6rem;
+        transform: scale(1.05); /* slight zoom */
       }
 
-      main hr 
-      {
+      main hr {
         border: 0;
         background: #9c97f1;
         height: 1.2px;
         margin: 80px 84px;
       }
 
-      .left 
-      {
+      .left {
         font-size: 2.5rem;
       }
 
-      .right 
-      {
+      .right {
         font-size: 1.5rem;
       }
 
-      .firstSection 
-      {
+      .firstSection {
         display: flex;
         justify-content: space-around;
         margin: 130px 0;
         align-items: center;
       }
 
-      .firstSection > div 
-      {
+      .firstSection > div {
         width: 30%;
       }
 
-      .leftSection 
-      {
+      .leftSection {
         font-size: 3rem;
       }
 
       /* This removes the underline, spacing, and clickable overlap */
-      .button-link 
-      {
+      .button-link {
         text-decoration: none;
         display: inline-block;
       }
 
-      .btn 
-      {
+      .btn {
         padding: 12px 24px;
         color: white;
         background: #0d2238;
@@ -130,55 +116,43 @@
       }
 
       /* Hover effect */
-      .btn:hover 
-      {
+      .btn:hover {
         background: white;
         color: #0d2238;
         border-color: white;
         transform: scale(1.05); /* slight zoom */
       }
 
-      .buttons 
-      {
+      .buttons {
         display: flex;
         align-items: center;
         gap: 15px;
       }
 
-      .rightSection img 
-      {
+      .rightSection img {
         width: 80%;
       }
 
-      .purple 
-      {
+      .purple {
         color: blueviolet;
       }
 
-      #element 
-      {
+      #element {
         color: blueviolet;
       }
 
-      .secondSection 
-      {
+      .secondSection {
+        flex-direction: column;
         max-width: 80vw;
         margin: auto;
         height: 80vh;
       }
 
-      .text-gray 
-      {
+      .text-gray {
         color: gray;
       }
 
-      .secondSection h1 
-      {
-        font-size: 2rem;
-      }
-
-      .secondSection .box 
-      {
+      .secondSection .box {
         background: white;
         width: 77vw;
         height: 2px;
@@ -186,24 +160,45 @@
         display: flex;
       }
 
-      .secondSection .vertical
-      {
+      .secondSection .vertical {
         height: 125px;
         width: 1px;
         background-color: white;
         margin: 0 140px;
       }
 
-      .image-top 
-      {
+      .image-top {
         width: 30px;
         position: relative;
         top: -36px;
         left: -15px;
       }
 
-      .vertical-title 
-      {
+      .image-bottom1 {
+        width: 94px;
+        position: relative;
+        top: -29px;
+        left: -13px;
+        transition: all 0.3s ease; /* smooth hover */
+      }
+
+      .image-bottom1:hover {
+        transform: scale(1.05); /* slight zoom */
+      }
+
+      .image-bottom2 {
+        width: 113px;
+        position: relative;
+        top: -58px;
+        left: -25px;
+        transition: all 0.3s ease; /* smooth hover */
+      }
+
+      .image-bottom2:hover {
+        transform: scale(1.05); /* slight zoom */
+      }
+
+      .vertical-title {
         position: relative;
         top: 93px;
         width: 169px;
@@ -211,8 +206,7 @@
         font-size: 1.5rem;
       }
 
-      .vertical-desc 
-      {
+      .vertical-desc {
         position: relative;
         top: 100px;
         color: gray;
@@ -220,13 +214,81 @@
         left: -7px;
       }
 
-      footer
+      /* .secondSection .photos
       {
+        margin: 366px;
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+        justify-content: center;
+      }
+
+      .program_photos
+      {
+        width: 300px;
+        position: relative;
+        top: -36px;
+        left: -15px;
+      } */
+
+      .thirdSection {
+        flex-direction: column;
+        max-width: 80vw;
+        margin: auto;
+        height: 125vh;
+      }
+
+      .thirdSection .languages {
+        margin: 25px -18px;
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+      }
+
+      .language-photos {
+        position: relative;
+        top: -4px;
+        object-fit: contain;
+      }
+
+      .thirdSection .box2 {
+        width: 77vw;
+        margin: -122px -30px;
+        display: flex;
+      }
+
+      .language-image {
+        margin: 0 7px;
+      }
+
+      .image-name {
+        position: relative;
+        top: 80px;
+        width: 200px;
+        left: -9px;
+        font-size: 1.2rem;
+        color: #a9a8b1;
+      }
+
+      .skill-heading1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        font-size: 1.5em;
+      }
+
+      .skill-heading2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 245px;
+        font-size: 1.5em;
+      }
+
+      footer {
         background-color: rgb(32 32 58);
       }
 
-      .footer 
-      {
+      .footer {
         display: flex;
         justify-content: space-evenly;
         align-items: flex-start;
@@ -234,31 +296,27 @@
         flex-wrap: wrap;
       }
 
-      .footer div
-      {
-        width: 223px;
+      .footer div {
+        width: 287px;
       }
 
-      .title
-      {
+      .title {
         font-size: 25px;
       }
 
-      .title-second
-      {
+      .title-second {
         text-decoration: none; /* removes underline */
         color: white; /* default color */
-        transition: color 0.3s ease; /* smooth hover effect */
+        transition: all 0.3s ease; /* smooth hover */
       }
 
-      .title-second:hover 
-      {
+      .title-second:hover {
         color: rgb(175, 175, 255);
         font-size: 26px;
+        transform: scale(1.05); /* slight zoom */
       }
 
-      .footer-second ul 
-      {
+      .footer-second ul {
         display: flex;
         flex-direction: column; /* makes items vertical */
         align-items: flex-start; /* align to left (you can use center if you want centered) */
@@ -266,86 +324,72 @@
         padding: 0;
       }
 
-      .footer-second ul li 
-      {
+      .footer-second ul li {
         margin: 8px 0; /* vertical spacing between items */
       }
 
-      .footer-second ul li a 
-      {
+      .footer-second ul li a {
         text-decoration: none;
         color: white;
         font-size: 1.2rem;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease; /* smooth hover */
       }
 
-      .footer-second ul li a:hover 
-      {
+      .footer-second ul li a:hover {
         color: rgb(175, 175, 255);
         font-size: 1.3rem;
+        transform: scale(1.05); /* slight zoom */
       }
 
-      footer .footer-rights
-      {
+      footer .footer-rights {
         text-align: center;
         color: gray;
         padding: 12px 0;
       }
 
-      @media screen and (max-width: 1813px)
-      {
-        
-        footer 
-        {
+      @media screen and (max-width: 1813px) {
+        footer {
           margin: -40px;
         }
 
-        nav 
-        {
+        nav {
           flex-direction: column;
           width: 110%;
           height: 100px;
         }
 
-        .secondSection
-        {
+        .secondSection {
           height: 240vh;
         }
 
-        .secondSection .box
-        {
+        .secondSection .box {
           width: 30vw;
         }
 
-        .box
-        {
+        .box {
           flex-direction: column;
         }
 
-        .image-top
-        {
+        .image-top {
           left: -36px;
           top: 100px;
         }
 
-        .vertical-title, .vertical-desc
-        {
+        .vertical-title,
+        .vertical-desc {
           left: 45px;
           top: 66px;
         }
 
-        .secondSection .vertical
-        {
+        .secondSection .vertical {
           height: unset;
         }
 
-        .firstSection
-        {
+        .firstSection {
           flex-direction: column-reverse;
         }
 
-        .leftSection
-        {
+        .leftSection {
           width: 100% !important;
           font-size: 2rem;
           display: flex;
@@ -354,25 +398,21 @@
           align-items: center;
         }
 
-        .rightSection
-        {
+        .rightSection {
           width: 60% !important;
         }
 
-        .leftSection .first-button, .second-button  
-        {
+        .leftSection .first-button,
+        .second-button {
           font-size: 10px;
         }
-        
       }
-
     </style>
   </head>
 
   <body>
     <header>
       <nav>
-
         <div class="left">
           <a
             href="#"
@@ -383,15 +423,15 @@
         </div>
 
         <div class="right">
-
           <ul>
-
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact Me</a></li>
-         
+            <li><a href="/" style="cursor: pointer">Home</a></li>
+            <li><a href="/about.html" style="cursor: pointer">About</a></li>
+            <li>
+              <a href="/project.html" style="cursor: pointer">Projects</a>
+            </li>
+            <li>
+              <a href="/contact_me.html" style="cursor: pointer">Contact Me</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -399,7 +439,6 @@
 
     <main>
       <section class="firstSection">
-
         <div class="leftSection">
           Hi, My name is <span class="purple">Saish</span>
 
@@ -414,7 +453,11 @@
               <button class="btn">Download Resume</button>
             </a>
 
-            <a href="https://www.linkedin.com/in/saish-rj/" target="_blank" class="button-link">
+            <a
+              href="https://www.linkedin.com/in/saish-rj/"
+              target="_blank"
+              class="button-link"
+            >
               <button class="btn">Visit LinkedIn</button>
             </a>
           </div>
@@ -423,134 +466,264 @@
         <div class="rightSection">
           <img src="image.png" alt="" />
         </div>
-
       </section>
 
       <hr />
 
       <section class="secondSection">
-
         <span class="text-gray">What I done so far</span>
 
-        <h1>Experience / Internships</h1>
+        <h1>Achievements / Extra Activities</h1>
 
         <div class="box">
-
           <div class="vertical">
-
             <img class="image-top" src="gsoc_logo.png" alt="" />
 
-            <div class="vertical-title">
-              GSoc (2026) 
-            </div>
+            <div class="vertical-title">GSoc (2026)</div>
 
             <div class="vertical-desc">
               here you can enter the info of perticuler program or internship
             </div>
-
           </div>
 
           <div class="vertical">
-
             <img class="image-top" src="developer_image.png" alt="" />
 
-            <div class="vertical-title">
-              Name With year
-            </div>
+            <div class="vertical-title">Name With year</div>
 
             <div class="vertical-desc">
               here you can enter the info of perticuler program or internship
             </div>
-
           </div>
 
           <div class="vertical">
-
             <img class="image-top" src="developer_image.png" alt="" />
 
-            <div class="vertical-title">
-              Name With year
-            </div>
+            <div class="vertical-title">Name With year</div>
 
             <div class="vertical-desc">
               here you can enter the info of perticuler program or internship
             </div>
-
           </div>
 
           <div class="vertical">
-
             <img class="image-top" src="developer_image.png" alt="" />
 
-            <div class="vertical-title">
-              Name With year
-            </div>
+            <div class="vertical-title">Name With year</div>
 
             <div class="vertical-desc">
               here you can enter the info of perticuler program or internship
             </div>
-
           </div>
 
           <div class="vertical">
-
             <img class="image-top" src="developer_image.png" alt="" />
 
-            <div class="vertical-title">
-              Name With year
-            </div>
+            <div class="vertical-title">Name With year</div>
 
             <div class="vertical-desc">
               here you can enter the info of perticuler program or internship
             </div>
-
           </div>
-
         </div>
 
+        <!-- <div class="photos">
+
+            <img class="program_photos" src="example.png" alt="" />
+            
+        </div> -->
+      </section>
+
+      <hr />
+
+      <section class="thirdSection">
+        <span class="text-gray">What I learn so far</span>
+
+        <h1>Skills</h1>
+
+        <div class="skill-heading1">Programming Languages</div>
+
+        <div class="languages">
+          <img
+            class="language-photos"
+            style="width: 145px; left: -68px"
+            src="java_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 183px; left: -90px"
+            src="c++_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 100px; left: -76px"
+            src="python_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 121px; left: -31px"
+            src="js_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 160px; left: -40px"
+            src="html_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 96px; left: -34px"
+            src="css_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 99px; left: 15px"
+            src="ruby_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 283px; left: -42px"
+            src="c_logo.png"
+            alt=""
+          />
+        </div>
+
+        <div class="box2">
+          <div class="language-image">
+            <div class="image-name">Java</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">C++</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">Python</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">JavaScript</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">HTML</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">CSS</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">Ruby</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">C#</div>
+          </div>
+        </div>
+
+        <div class="skill-heading2">Databases</div>
+
+        <div class="languages">
+          <img
+            class="language-photos"
+            style="width: 145px; left: -68px"
+            src="mysql_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 183px; left: -90px"
+            src="postgresql_logo.png"
+            alt=""
+          />
+
+          <img
+            class="language-photos"
+            style="width: 100px; left: -76px"
+            src="mongodb_logo.png"
+            alt=""
+          />
+        </div>
+
+        <div class="box2">
+          <div class="language-image">
+            <div class="image-name">Java</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">C++</div>
+          </div>
+
+          <div class="language-image">
+            <div class="image-name">Python</div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-
       <div class="footer">
-
         <div class="footer-first">
-
           <div class="title">
-
-           <a
-            href="#"
-            class="title-second"
-            onclick="scrollToTopAndReload(); return false;"
-            >Saish - Developer Portfolio</a>
-
+            <a
+              href="#"
+              class="title-second"
+              onclick="scrollToTopAndReload(); return false;"
+              >Saish - Developer Portfolio</a
+            >
           </div>
-
         </div>
 
         <div class="footer-second">
-
           <ul>
-
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact Me</a></li>
-
+            <li><a href="">Home</a></li>
+            <li><a href="/about.html" style="cursor: pointer">About</a></li>
+            <li>
+              <a href="/project.html" style="cursor: pointer">Projects</a>
+            </li>
+            <li>
+              <a href="/contact_me.html" style="cursor: pointer">Contact Me</a>
+            </li>
           </ul>
-
         </div>
 
+        <div style="display: flex; flex-direction: column">
+          <a
+            href="https://www.linkedin.com/in/saish-rj/"
+            target="_blank"
+            class="button-link"
+          >
+            <img class="image-bottom1" src="linkedin_logo.png" alt="" />
+          </a>
+
+          <a
+            href="https://github.com/Saish46"
+            target="_blank"
+            class="button-link"
+          >
+            <img class="image-bottom2" src="github_logo.png" alt="" />
+          </a>
+        </div>
       </div>
 
       <div class="footer-rights">
-
         Copyright &#169; 2025 Saish_Jadhav | All rights reserved
-
       </div>
-
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -565,24 +738,23 @@
           "AI Developer",
         ],
         typeSpeed: 80,
+        loop: true,
       });
     </script>
 
     <script>
-      function scrollToTopAndReload() 
-      {
+      function scrollToTopAndReload() {
         // Smooth scroll to top
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' // valid value
+          behavior: "smooth", // valid value
         });
 
         // After short delay, refresh the page
         setTimeout(() => {
           window.location.reload();
-        }, 600); // half a second delay for smooth scroll
+        }, 800); // half a second delay for smooth scroll
       }
     </script>
-
   </body>
 </html>
