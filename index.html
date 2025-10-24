@@ -1,705 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1,0" />
-    <title>Saish - Developer Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background-color: rgb(160 159 255);
-        color: rgb(0, 0, 0);
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 28px;
-      }
-
-      .title-first {
-        font-size: 2rem;
-        text-decoration: none; /* removes underline */
-        color: white; /* default color */
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .title-first:hover {
-        color: rgb(0, 0, 0);
-        font-size: 2.1rem;
-        transform: scale(1.05); /* slight zoom */
-      }
-
-      nav ul {
-        display: flex;
-        justify-content: center;
-      }
-
-      nav ul li {
-        list-style: none;
-        margin: 0 23px;
-      }
-
-      nav ul li a {
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: white;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      nav ul li a:hover {
-        color: rgb(0, 0, 0);
-        font-size: 1.6rem;
-        transform: scale(1.05); /* slight zoom */
-      }
-
-      main hr {
-        border: 0;
-        background: #9c97f1;
-        height: 1.2px;
-        margin: 80px 84px;
-      }
-
-      .left {
-        font-size: 2.5rem;
-        margin-left: 80px;
-      }
-
-      .right {
-        font-size: 1.5rem;
-        margin-right: 45px;
-      }
-
-      .firstSection {
-        display: flex;
-        justify-content: space-around;
-        margin: 130px 0;
-        align-items: center;
-      }
-
-      .firstSection > div {
-        width: 30%;
-      }
-
-      .leftSection {
-        font-size: 3rem;
-      }
-
-      /* This removes the underline, spacing, and clickable overlap */
-      .button-link {
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .btn {
-        padding: 12px 24px;
-        color: rgb(0, 0, 0);
-        background: #ffffff;
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 20px;
-        font-size: 18px;
-        cursor: pointer;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      /* Hover effect */
-      .btn:hover {
-        background: rgb(123, 147, 158);
-        color: #000000;
-        transform: scale(1.05); /* slight zoom */
-      }
-
-      .buttons {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .rightSection img {
-        width: 80%;
-      }
-
-      .purple {
-        color: blueviolet;
-      }
-
-      #element {
-        color: blueviolet;
-      }
-
-      h1 {
-        font-size: 35px;
-      }
-
-      .secondSection {
-        flex-direction: column;
-        max-width: 80vw;
-        margin: auto;
-        height: 80vh;
-      }
-
-      .text-gray {
-        color: gray;
-      }
-
-      .secondSection .box {
-        background: rgb(0, 0, 0);
-        width: 77vw;
-        height: 2px;
-        margin: 100px 0;
-        display: flex;
-      }
-
-      .secondSection .vertical {
-        height: 125px;
-        width: 1px;
-        background-color: rgb(0, 0, 0);
-        margin: 0 140px;
-      }
-
-      .image-top {
-        width: 30px;
-        position: relative;
-        top: -36px;
-        left: -15px;
-      }
-
-      .image-bottom1 {
-        width: 94px;
-        position: relative;
-        top: -29px;
-        left: -13px;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .image-bottom1:hover {
-        transform: scale(1.2); /* slight zoom */
-      }
-
-      .image-bottom2 {
-        width: 113px;
-        position: relative;
-        top: -58px;
-        left: -25px;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .image-bottom2:hover {
-        transform: scale(1.2); /* slight zoom */
-      }
-
-      .vertical-title {
-        position: relative;
-        top: 93px;
-        width: 169px;
-        left: -6px;
-        font-size: 1.5rem;
-      }
-
-      .vertical-desc {
-        position: relative;
-        top: 100px;
-        color: gray;
-        width: 130px;
-        left: -7px;
-      }
-
-      /* .secondSection .photos
-      {
-        margin: 366px;
-        display: flex;
-        flex-direction: row;
-        gap: 70px;
-        justify-content: center;
-      }
-
-      .program_photos
-      {
-        width: 300px;
-        position: relative;
-        top: -36px;
-        left: -15px;
-      } */
-
-      .thirdSection {
-        flex-direction: column;
-        max-width: 80vw;
-        margin: auto;
-        height: 140vh;
-      }
-
-      .thirdSection .languages {
-        margin: 32px;
-        display: flex;
-        flex-direction: row;
-        gap: 95px;
-        justify-content: center;
-      }
-
-      .language-photos {
-        position: relative;
-        object-fit: contain;
-        width: 70px;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .language-photos:hover {
-        transform: scale(1.2); /* slight zoom */
-        cursor: pointer;
-      }
-
-      .database-photos {
-        position: relative;
-        object-fit: contain;
-        width: 95px;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .database-photos:hover {
-        transform: scale(1.2); /* slight zoom */
-        cursor: pointer;
-      }
-
-      .frameworks-photos {
-        position: relative;
-        object-fit: contain;
-        width: 85px;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .frameworks-photos:hover {
-        transform: scale(1.2); /* slight zoom */
-        cursor: pointer;
-      }
-
-      .tools-photos
-      {
-        position: relative;
-        object-fit: contain;
-        width: 85px;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .tools-photos:hover
-      {
-        transform: scale(1.2); /* slight zoom */
-        cursor: pointer;
-      }
-
-      .skill-heading {
-        display: flex;
-        justify-content: center;
-        margin-top: 120px;
-        font-size: 1.5em;
-      }
-
-      footer {
-        background-color: rgb(58 58 68);
-      }
-
-      .footer {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        padding: 14px 100px;
-        flex-wrap: wrap;
-      }
-
-      .footer div {
-        width: 287px;
-      }
-
-      .title {
-        font-size: 25px;
-      }
-
-      .title-second {
-        text-decoration: none; /* removes underline */
-        color: white; /* default color */
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .title-second:hover {
-        color: rgb(103, 147, 187);
-        font-size: 26px;
-        transform: scale(1.05); /* slight zoom */
-      }
-
-      .footer-second ul {
-        display: flex;
-        flex-direction: column; /* makes items vertical */
-        align-items: flex-start; /* align to left (you can use center if you want centered) */
-        list-style: none;
-        padding: 0;
-      }
-
-      .footer-second ul li {
-        margin: 8px 0; /* vertical spacing between items */
-      }
-
-      .footer-second ul li a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2rem;
-        transition: all 0.3s ease; /* smooth hover */
-      }
-
-      .footer-second ul li a:hover {
-        color: rgb(103, 147, 187);
-        font-size: 1.3rem;
-        transform: scale(1.05); /* slight zoom */
-      }
-
-      footer .footer-rights {
-        text-align: center;
-        color: gray;
-        padding: 12px 0;
-      }
-
-      @media screen and (max-width: 1813px) {
-        footer {
-          margin: -40px;
-        }
-
-        nav {
-          flex-direction: column;
-          width: 110%;
-          height: 100px;
-        }
-
-        .secondSection {
-          height: 240vh;
-        }
-
-        .secondSection .box {
-          width: 30vw;
-        }
-
-        .box {
-          flex-direction: column;
-        }
-
-        .image-top {
-          left: -36px;
-          top: 100px;
-        }
-
-        .vertical-title,
-        .vertical-desc {
-          left: 45px;
-          top: 66px;
-        }
-
-        .secondSection .vertical {
-          height: unset;
-        }
-
-        .firstSection {
-          flex-direction: column-reverse;
-        }
-
-        .leftSection {
-          width: 100% !important;
-          font-size: 2rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .rightSection {
-          width: 60% !important;
-        }
-
-        .leftSection .first-button,
-        .second-button {
-          font-size: 10px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <nav>
-        <div class="left">
-          <a
-            href="#"
-            class="title-first"
-            onclick="scrollToTopAndReload(); return false;"
-            >Saish's Portfolio</a
-          >
-        </div>
-
-        <div class="right">
-          <ul>
-            <li><a href="/" style="cursor: pointer">Home</a></li>
-            <li><a href="/about.html" style="cursor: pointer">About</a></li>
-            <li>
-              <a href="/project.html" style="cursor: pointer">Projects</a>
-            </li>
-            <li>
-              <a href="/contact_me.html" style="cursor: pointer">Contact Me</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <section class="firstSection">
-        <div class="leftSection">
-          Hi, My name is <span class="purple">Saish</span>
-
-          <div>and I am a passionate</div>
-
-          <span id="element"></span>
-
-          <br /><br />
-
-          <div class="buttons">
-            <a href="resume.pdf" download class="button-link">
-              <button class="btn">Download Resume</button>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/saish-rj/"
-              target="_blank"
-              class="button-link"
-            >
-              <button class="btn">Visit LinkedIn</button>
-            </a>
-          </div>
-        </div>
-
-        <div class="rightSection">
-          <img src="image.png" alt="" />
-        </div>
-      </section>
-
-      <hr />
-
-      <section class="secondSection">
-        <span class="text-gray">What I done so far</span>
-
-        <h1>Achievements / Extra Activities</h1>
-
-        <div class="box">
-          <div class="vertical">
-            <img class="image-top" src="gsoc_logo.png" alt="" />
-
-            <div class="vertical-title">GSoc (2026)</div>
-
-            <div class="vertical-desc">
-              here you can enter the info of perticuler program or internship
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saish's Portfolio - Software & Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#" class="logo-link" onclick="refreshAndScrollToTop(); return false;">
+                    <span class="logo-text">Saish</span>
+                </a>
             </div>
-          </div>
-
-          <div class="vertical">
-            <img class="image-top" src="developer_image.png" alt="" />
-
-            <div class="vertical-title">Name With year</div>
-
-            <div class="vertical-desc">
-              here you can enter the info of perticuler program or internship
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-          </div>
+        </div>
+    </nav>
 
-          <div class="vertical">
-            <img class="image-top" src="developer_image.png" alt="" />
-
-            <div class="vertical-title">Name With year</div>
-
-            <div class="vertical-desc">
-              here you can enter the info of perticuler program or internship
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Saish</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Full-Stack Developer | Software Engineer | DevOps Engineer | AI Developer</h2>
+                    <p class="hero-description">
+                        Passionate about creating innovative solutions and building exceptional web experiences 
+                        that make a difference in people's lives.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="resume.pdf" target="_blank" class="btn btn-resume">View My Resume</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="floating-icons">
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-java"></i>
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
 
-          <div class="vertical">
-            <img class="image-top" src="developer_image.png" alt="" />
-
-            <div class="vertical-title">Name With year</div>
-
-            <div class="vertical-desc">
-              here you can enter the info of perticuler program or internship
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my journey and passion</p>
             </div>
-          </div>
-
-          <div class="vertical">
-            <img class="image-top" src="developer_image.png" alt="" />
-
-            <div class="vertical-title">Name With year</div>
-
-            <div class="vertical-desc">
-              here you can enter the info of perticuler program or internship
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm Saish</h3>
+                    <p>
+                        I'm a passionate software developer and full-stack web developer with a love for creating 
+                        innovative digital solutions. My journey in technology started with curiosity and has evolved 
+                        into a career dedicated to building applications that solve real-world problems.
+                    </p>
+                    <p>
+                        I specialize in both frontend and backend development, with expertise in modern frameworks 
+                        and technologies. I enjoy the entire development process, from conceptualizing ideas to 
+                        deploying scalable applications.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- <div class="photos">
-
-            <img class="program_photos" src="example.png" alt="" />
-            
-        </div> -->
-      </section>
-
-      <hr />
-
-      <section class="thirdSection">
-        <span class="text-gray">What I learn so far</span>
-
-        <h1>Skills</h1>
-
-        <div class="skill-heading">Programming Languages</div>
-
-        <div class="languages">
-          <img class="language-photos" src="java.png" alt="" />
-
-          <img class="language-photos" src="c++.png" alt="" />
-
-          <img class="language-photos" src="python.png" alt="" />
-
-          <img class="language-photos" src="js.png" alt="" />
-
-          <img class="language-photos" src="html.png" alt="" />
-
-          <img class="language-photos" src="css.png" alt="" />
-
-          <img class="language-photos" src="ruby.png" alt="" />
-
-          <img class="language-photos" src="c-sharp.png" alt="" />
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-gem"></i>
+                            <span>Ruby</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-hashtag"></i>
+                            <span>C#</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-gem"></i>
+                            <span>Rails</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="skill-heading">Databases</div>
-
-        <div class="languages">
-          <img class="database-photos" src="mysql.png" alt="" />
-
-          <img class="database-photos" src="postgresql.png" alt="" />
-
-          <img class="database-photos" src="mongodb.png" alt="" />
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with React frontend, Node.js backend, and MongoDB database. Features include user authentication, payment integration, and admin dashboard.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features built with modern web technologies.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express.js</span>
+                            <span>Socket.io</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reports for business intelligence.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="skill-heading">Frameworks & Libraries</div>
-
-        <div class="languages">
-          <img class="frameworks-photos" src="react.png" alt="" />
-
-          <img class="frameworks-photos" src="node-js.png" alt="" />
-
-          <img class="frameworks-photos" src="tailwind-css.png" alt="" />
-
-          <img class="frameworks-photos" src="rails.png" alt="" />
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jadhavsaish276@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9511882446</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Pune, Maharashtra, India</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/saish-rj/" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Saish46" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
 
-         <div class="skill-heading">Tools</div>
-
-        <div class="languages">
-          <img class="tools-photos" src="github.png" alt="" />
-
-          <img class="tools-photos" src="git.png" alt="" />
-
-          <img class="tools-photos" src="vscode.png" alt="" />
-
-          <img class="tools-photos" src="vercel.png" alt="" />
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Saish's Portfolio. All rights reserved.</p>
+                <p>Designed & Developed with <i class="fas fa-heart"></i> by Saish</p>
+            </div>
         </div>
-
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer">
-        <div class="footer-first">
-          <div class="title">
-            <a
-              href="#"
-              class="title-second"
-              onclick="scrollToTopAndReload(); return false;"
-              >Saish - Developer Portfolio</a
-            >
-          </div>
-        </div>
-
-        <div class="footer-second">
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="/about.html" style="cursor: pointer">About</a></li>
-            <li>
-              <a href="/project.html" style="cursor: pointer">Projects</a>
-            </li>
-            <li>
-              <a href="/contact_me.html" style="cursor: pointer">Contact Me</a>
-            </li>
-          </ul>
-        </div>
-
-        <div style="display: flex; flex-direction: column">
-          <a
-            href="https://www.linkedin.com/in/saish-rj/"
-            target="_blank"
-            class="button-link"
-          >
-            <img class="image-bottom1" src="linkedin_logo.png" alt="" />
-          </a>
-
-          <a
-            href="https://github.com/Saish46"
-            target="_blank"
-            class="button-link"
-          >
-            <img class="image-bottom2" src="github_logo.png" alt="" />
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-rights">
-        Copyright &#169; 2025 Saish_Jadhav | All rights reserved
-      </div>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-    <!-- Setup and start animation! -->
-    <script>
-      var typed = new Typed("#element", {
-        strings: [
-          "Full-Stack Developer",
-          "Software Engineer",
-          "DevOps Engineer",
-          "AI Developer",
-        ],
-        typeSpeed: 80,
-        loop: true,
-      });
-    </script>
-
-    <script>
-      function scrollToTopAndReload() {
-        // Smooth scroll to top
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth", // valid value
-        });
-
-        // After short delay, refresh the page
-        setTimeout(() => {
-          window.location.reload();
-        }, 800); // half a second delay for smooth scroll
-      }
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
