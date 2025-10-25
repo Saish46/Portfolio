@@ -416,6 +416,109 @@ section {
     color: white;
 }
 
+/* Education Section */
+.education {
+    background: white;
+    padding: 5rem 0;
+}
+
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: translateX(-50%);
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.education-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.education-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.education-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin: 0 2rem;
+}
+
+.education-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.education-content {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+}
+
+.education-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.education-content h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.education-content h4 {
+    font-size: 1.1rem;
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.education-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.education-grade {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
@@ -726,6 +829,43 @@ section {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Education Section Mobile */
+    .education-timeline::before {
+        left: 30px;
+    }
+
+    .education-item {
+        flex-direction: row !important;
+        margin-bottom: 2rem;
+    }
+
+    .education-item:nth-child(even) {
+        flex-direction: row !important;
+    }
+
+    .education-icon {
+        margin: 0 1rem 0 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .education-icon i {
+        font-size: 1.2rem;
+    }
+
+    .education-content {
+        max-width: none;
+        padding: 1.5rem;
+    }
+
+    .education-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .education-content h4 {
+        font-size: 1rem;
     }
 }
 
