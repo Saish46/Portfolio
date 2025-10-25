@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Navigation -->
@@ -14,7 +15,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#" class="logo-link" onclick="refreshAndScrollToTop(); return false;">
-                    <span class="logo-text">Saish</span>
+                    <span class="logo-text">Saish's Portfolio</span>
                 </a>
             </div>
             <ul class="nav-menu" id="nav-menu">
@@ -52,7 +53,7 @@
                     </h1>
                     <h2 class="hero-subtitle">Full-Stack Developer | Software Engineer | DevOps Engineer | AI Developer</h2>
                     <p class="hero-description">
-                        Passionate about creating innovative solutions and building exceptional web experiences 
+                        Passionate about creating innovative solutions and building exceptional web & app experiences 
                         that make a difference in people's lives.
                     </p>
                     <div class="hero-buttons">
@@ -64,10 +65,10 @@
                 <div class="hero-image">
                     <div class="profile-card">
                         <div class="profile-img">
-                            <i class="fas fa-user-circle"></i>
+                            <img src="profile.jpg" alt="Saish's Profile Picture">
                         </div>
                         <div class="floating-icons">
-                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-js-square"></i>    
                             <i class="fab fa-react"></i>
                             <i class="fab fa-java"></i>
                             <i class="fab fa-python"></i>
@@ -253,7 +254,7 @@
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Some of my recent work</p>
             </div>
-            <div class="projects-grid">
+            <!-- <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-shopping-cart"></i>
@@ -329,7 +330,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -368,7 +369,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/myzbglnw" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -381,6 +382,8 @@
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
+                        <input type="hidden" name="_next" value="http://localhost:8000/?success=true">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>

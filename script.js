@@ -11,8 +11,41 @@ function refreshAndScrollToTop() {
     });
 }
 
+// Contact form handling with success detection and page reload
+function handleContactForm() {
+    // Check if page was loaded with success parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        // Show success message
+        alert('Message sent successfully! Thank you for reaching out.');
+        
+        // Remove success parameter from URL and reload to top
+        window.history.replaceState({}, document.title, window.location.pathname);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', function(e) {
+        // Let the form submit naturally to Formspree
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Note: Button will be reset when page reloads after Formspree redirect
+    });
+}
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize contact form
+    handleContactForm();
+    
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
     
