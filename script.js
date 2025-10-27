@@ -16,16 +16,46 @@ function handleContactForm() {
     // Check if page was loaded with success parameter
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === 'true') {
+        // Immediately scroll to top first
+        window.scrollTo(0, 0);
+        
         // Show success message
         alert('Message sent successfully! Thank you for reaching out.');
         
-        // Remove success parameter from URL and reload to top
+        // Clear the form data
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.reset();
+        }
+        
+        // Remove success parameter from URL
         window.history.replaceState({}, document.title, window.location.pathname);
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        
+        // Force scroll to top again after cleanup
+        window.scrollTo(0, 0);
+        
+        return;
     }
+    
+    // Handle browser back button from Formspree
+    window.addEventListener('pageshow', function(event) {
+        // This event fires when page is loaded from cache (back button)
+        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+            // Immediately scroll to top
+            window.scrollTo(0, 0);
+            
+            // Clear form and ensure we're at top
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.reset();
+            }
+            
+            // Double-check scroll position
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 50);
+        }
+    });
     
     const form = document.getElementById('contactForm');
     
