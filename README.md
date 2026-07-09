@@ -4,8 +4,8 @@
 
 <div align="center">
 
-[🌐 Live Portfolio](https://saishsportfolio.vercel.app/) 
-[💼 LinkedIn](https://www.linkedin.com/in/saish-rj/) 
+[🌐 Live Portfolio](https://saishsportfolio.vercel.app/) •
+[💼 LinkedIn](https://www.linkedin.com/in/saish-rj/) • 
 [📧 Contact](mailto:jadhavsaish276@gmail.com.com)
 
 </div>
