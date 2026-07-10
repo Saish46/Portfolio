@@ -16,7 +16,7 @@
 
 Welcome to my personal portfolio repository.
 
-I'm a Computer Science student passionate about **Software Engineering, Artificial Intelligence, Full-Stack Development**. This portfolio showcases my projects, technical skills, certifications, and journey as a developer focused on building impactful, production-ready applications.
+I'm a Computer Science student passionate about **Full-Stack Development, Software Engineering, Prompt Engineering, Agentic AI**. This portfolio showcases my projects, technical skills, certifications, and journey as a developer focused on building impactful, production-ready applications.
 
 📚 Always eager to learn, adapt, and turn ideas into impactful solutions.
 
