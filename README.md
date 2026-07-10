@@ -1,4 +1,4 @@
-# 🚀 Saish Jadhav — Software Engineer & AI Developer
+# 🚀 Saish Jadhav — Software Engineer || Full-Stack Developer
 
 > Crafting scalable software, intelligent AI solutions, and modern web experiences that solve real-world problems.
 
